@@ -1,0 +1,10 @@
+{
+  "name": "compmaster",
+  "version": "0.0.1",
+  "description": "Make a league, add some teams, do battle.",
+  "main": "index.js",
+  "repository": "https://github.com/slightly-askew/compmaster.git",
+  "author": "slightly-askew <oli@oaskew.co.uk>",
+  "license": "MIT",
+  "private": true
+}
