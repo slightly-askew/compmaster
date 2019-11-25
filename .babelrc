@@ -1,0 +1,21 @@
+{
+  "env": {
+    "production": {
+      "presets": ["next/babel"],
+      "plugins": [
+        "emotion" // emotion must be first for all environments
+      ]
+    },
+    "development": {
+      "presets": ["next/babel"],
+      "plugins": [
+        [
+          "emotion",
+          {
+            "sourceMap": true
+          }
+        ]
+      ]
+    }
+  }
+}
