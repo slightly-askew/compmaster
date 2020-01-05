@@ -35,12 +35,22 @@ function Header(props) {
         <ul sx={menuItems}>
           <li>
             <Link href="/">
-              <a sx={link}>Home</a>
+              <a sx={link}>Compmaster</a>
             </Link>
           </li>
           <li>
-            <Link href="/about">
-              <a sx={{ ...link, ml: '2em' }}>About</a>
+            <Link href="/">
+              <a sx={{ ...link, ml: '2em' }}>Leagues</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/">
+              <a sx={{ ...link, ml: '2em' }}>Teams</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/">
+              <a sx={{ ...link, ml: '2em' }}>Reports</a>
             </Link>
           </li>
         </ul>
