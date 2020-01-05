@@ -10,15 +10,15 @@
   "dependencies": {
     "@emotion/core": "^10.0.22",
     "@mdx-js/react": "^1.5.1",
-    "@types/node": "^12.12.12",
-    "@types/react": "^16.9.13",
+    "@types/node": "^12.12.14",
+    "@types/react": "^16.9.14",
     "dotenv": "^8.2.0",
     "isomorphic-unfetch": "^3.0.0",
     "next": "^9.1.4",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "theme-ui": "^0.2.49",
-    "typescript": "^3.7.2"
+    "typescript": "^3.7.3"
   },
   "scripts": {
     "dev": "next",
