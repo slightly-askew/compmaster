@@ -1,0 +1,94 @@
+enum Format {
+  Ladder
+  Knockout
+  Group
+}
+
+enum Gender {
+  Mens
+  Ladies
+  Mixed
+}
+
+enum Facility {
+  Licenced
+  bar
+  Hot
+  food
+  Snacks
+}
+
+
+
+type OfficialCapacity {
+  name: String!
+}
+
+type Qualification {
+  groups: Int
+  legs: Int!
+}
+
+type Comp {
+  comp_name: String!
+  age_groups: [AgeGroup!]!
+  gender: Gender!
+  format: Format!
+  qualifying: Qualification
+  officiation: [OfficialRole!]
+}
+
+type Venue {
+  courts: [Court!]!
+  name: String!
+  place_reference: String
+  facilities: [Facility!]
+}
+
+type Court {
+  belongs_to: Venue!
+  name: String!
+}
+
+type Team {
+  captain: Player
+} 
+
+type User {}
+
+
+
+type MatchOfficial {
+  official: User!
+  capacity: OfficialCapacity!
+  report: String! #TODO add report type
+}
+
+type Incident {
+  match: Match!
+  completed_by: User!
+  completed_on_behalf_of: User
+  submission_date: Date!
+  report: String
+  
+}
+
+type Match {
+  match_date: Date!
+  match_time: Time!
+
+# highlights
+  home_team: Team!
+  visiting_team: Team!
+  home_score: Int
+  visitor_score: Int
+  cancelled: Boolean
+  cancelled_reason: String
+  forfeit: Team
+  officials: []
+}
+
+type Bye {
+  team: Team!
+
+}

@@ -2,9 +2,10 @@ export interface comp {
   name: string
   age_groups: Array<ageGroup>
   gender: 'mens' | 'ladies' | 'mixed'
-  format: ''
-  qualify?: {
+  format: 'ladder' | 'knockout' | 'groups'
+  qualifying?: {
     groups: number
+    legs: number
   }
 }
 
@@ -16,5 +17,7 @@ export interface ageGroup {
   ladies: boolean
   mixed: boolean
 }
+
+export interface match {}
 
 export interface compFormat {}
