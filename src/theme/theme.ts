@@ -34,9 +34,25 @@ export default {
       '80': 'rgba(214, 214, 214, 0.60)',
       '90': 'rgba(209, 209, 209, 0.55)',
     },
+    fontWeights: {
+      body: 400,
+    },
     fonts: {
       body: 'system-ui, sans-serif',
       heading: '"Avenir Next", sans-serif',
+    },
+    styles: {
+      root: {
+        fontFamily: 'sans-serif',
+        fontWeight: 'body',
+        backgroundColor: 'black',
+      },
+    },
+    layout: {
+      header: {
+        backgroundColor: 'base.0',
+        color: 'defaultText.30',
+      },
     },
   },
 }

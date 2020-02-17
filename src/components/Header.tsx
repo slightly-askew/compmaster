@@ -2,6 +2,7 @@
 import { jsx } from 'theme-ui'
 
 import Link from 'next/link'
+import { NextPage } from 'next'
 
 const background = {
   width: '100%',
@@ -28,9 +29,13 @@ const link = {
   cursor: 'pointer',
 }
 
-function Header(props) {
+interface Props {
+  someValue: string
+}
+
+const Header: NextPage<Props> = props => {
   return (
-    <div {...props} sx={background}>
+    <header {...props} sx={{ ...background, variant: 'layout.header' }}>
       <nav>
         <ul sx={menuItems}>
           <li>
@@ -45,7 +50,7 @@ function Header(props) {
           </li>
         </ul>
       </nav>
-    </div>
+    </header>
   )
 }
 
