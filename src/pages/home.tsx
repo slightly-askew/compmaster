@@ -1,12 +1,13 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
-
-import Link from 'next/link'
-import Layout from '../components/Layout'
-import fetch from 'isomorphic-unfetch'
+import { jsx, Heading } from 'theme-ui'
 
 import { NextPage } from 'next'
 
-const Home: NextPage<{}> = props => <div>Hello world in sans serif</div>
+const Home: NextPage<{}> = props => (
+  <>
+    <Heading sx={{ height: '3em', background: 'white' }} />
+    <div>Hello world in sans serif</div>
+  </>
+)
 
 export default Home

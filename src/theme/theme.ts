@@ -1,5 +1,7 @@
 export default {
   colors: {
+    background:
+      'radial-gradient(62.92% 161.07% at 16.11% 37.28%, #3F2264 0%, #302F57 100%)',
     base: {
       '0': '#FFFFFF',
       '10': '#FAFAFA',
@@ -41,18 +43,20 @@ export default {
       body: 'system-ui, sans-serif',
       heading: '"Avenir Next", sans-serif',
     },
-    styles: {
-      root: {
-        fontFamily: 'sans-serif',
-        fontWeight: 'body',
-        backgroundColor: 'black',
-      },
-    },
     layout: {
       header: {
         backgroundColor: 'base.0',
         color: 'defaultText.30',
       },
+    },
+  },
+  styles: {
+    root: {
+      fontFamily: 'sans-serif',
+      fontWeight: 'body',
+      backgroundColor: '#302F57',
+      backgroundImage:
+        'radial-gradient(62.92% 161.07% at 16.11% 37.28%, #3F2264 0%, #302F57 100%)',
     },
   },
 }
