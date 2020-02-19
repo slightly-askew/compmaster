@@ -1,7 +1,12 @@
-export default {
+const theme = {
   colors: {
     background:
       'radial-gradient(62.92% 161.07% at 16.11% 37.28%, #3F2264 0%, #302F57 100%)',
+    primary: '1E88EA',
+    shadow: {
+      primary: 'rgba(7, 112, 235, 0.16)',
+    },
+    primary_dark: '0770EB',
     base: {
       '0': '#FFFFFF',
       '10': '#FAFAFA',
@@ -36,27 +41,94 @@ export default {
       '80': 'rgba(214, 214, 214, 0.60)',
       '90': 'rgba(209, 209, 209, 0.55)',
     },
-    fontWeights: {
-      body: 400,
+  },
+  fontWeights: {
+    body: 400,
+    bold: 700,
+  },
+  fontSizes: [
+    '0.875rem',
+    '1rem',
+    '1.125rem',
+    '1.3125rem',
+    '1.5rem',
+    '1.6875rem',
+    '2.25rem',
+    '3rem',
+  ],
+  radii: ['0px', '0.25rem', '0.5rem', '0.75rem', '1rem'],
+  space: [
+    '0px',
+    '0.25rem',
+    '0.5rem',
+    '0.75rem',
+    '1rem',
+    '1.5rem',
+    '2rem',
+    '3rem',
+    '4rem',
+    '6rem',
+    '9rem',
+  ],
+  shadows: {
+    elevation3:
+      '3px 3px 48px rgba(0, 0, 0, 0.04), 2px 5px 30px rgba(0, 0, 0, 0.06)',
+  },
+  fonts: {
+    body: '"Euclid Circular B Trial",system-ui, sans-serif',
+    heading: '"Avenir Next", sans-serif',
+  },
+  layout: {
+    header: {
+      backgroundColor: 'base.0',
+      color: 'defaultText.30',
     },
-    fonts: {
-      body: 'system-ui, sans-serif',
-      heading: '"Avenir Next", sans-serif',
-    },
-    layout: {
-      header: {
-        backgroundColor: 'base.0',
-        color: 'defaultText.30',
+  },
+  typography: {
+    interface: {
+      caps: {
+        fontStyle: 'normal',
+        fontWeight: 'bold',
+        lineHeight: '2rem',
       },
     },
   },
+  buttons: {
+    primary: {
+      bg: 'primary',
+      color: 'invertedText',
+      borderRadius: 2,
+      px: '5',
+      py: '2',
+      fontSize: 0,
+      boxShadow: (theme: any) =>
+        `2px 2px 8px ${theme.colors.shadow.primary_dark}, 0px 2px 3px rgba(0, 0, 0, 0.08), inset 0px -4px 12px rgba(0, 0, 0, 0.12)`,
+    },
+  },
+  // Body styles
   styles: {
     root: {
-      fontFamily: 'sans-serif',
+      fontFamily: 'body',
       fontWeight: 'body',
-      backgroundColor: '#302F57',
-      backgroundImage:
-        'radial-gradient(62.92% 161.07% at 16.11% 37.28%, #3F2264 0%, #302F57 100%)',
+      backgroundColor: '#F5F8FA',
+      '& button': {
+        display: 'inline-block',
+        border: 'none',
+        margin: 0,
+        textDecoration: 'none',
+        fontSize: 1,
+        cursor: 'pointer',
+        textAlign: 'center',
+        '-webkitAppearance': 'none',
+        '-mozAppearance': 'none',
+        background: 'none',
+        '&::-moz-focus-inner': {
+          border: '0 !important',
+        },
+      },
+      //backgroundImage: 'radial-gradient(62.92% 161.07% at 16.11% 37.28%, #3F2264 0%, #302F57 100%)',
     },
   },
 }
+
+export default theme
