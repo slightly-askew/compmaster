@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
+import { jsx, Flex, Box, Container, Button } from 'theme-ui'
 
 import Link from 'next/link'
 import { NextPage } from 'next'
@@ -29,28 +29,23 @@ const link = {
   cursor: 'pointer',
 }
 
-interface Props {
-  someValue: string
-}
+interface HeaderProps {}
 
-const Header: NextPage<Props> = props => {
+const Header: NextPage<HeaderProps> = props => {
   return (
-    <header {...props} sx={{ ...background, variant: 'layout.header' }}>
-      <nav>
-        <ul sx={menuItems}>
-          <li>
-            <Link href="/">
-              <a sx={link}>Home</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/about">
-              <a sx={{ ...link, ml: '2em' }}>About</a>
-            </Link>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <Box
+      as="header"
+      {...props}
+      sx={{ ...background, variant: 'layout.header' }}
+    >
+      <Container>
+        <Flex sx={{ justifyContent: 'space-between' }}>
+          <div></div>
+          <div></div>
+          <div sx={{ fontSize: '1rem' }}>Hello from the header</div>
+        </Flex>
+      </Container>
+    </Box>
   )
 }
 

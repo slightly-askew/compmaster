@@ -1,16 +1,13 @@
 /** @jsx jsx */
-import { jsx, Box } from 'theme-ui'
+import { jsx } from 'theme-ui'
+import Header from '../components/Header'
 
 import { NextPage } from 'next'
 
 const Home: NextPage<{}> = props => (
   <>
-    <Box
-      sx={{ height: '4rem', background: 'white', boxShadow: 'elevation3' }}
-      as="header"
-    />
+    <Header />
     <div>Hello world in sans serif</div>
-    <button>I am a button</button>
   </>
 )
 

@@ -80,7 +80,9 @@ const theme = {
   },
   layout: {
     header: {
-      backgroundColor: 'base.0',
+      height: '4rem',
+      background: 'white',
+      boxShadow: 'elevation3',
       color: 'defaultText.30',
     },
   },
@@ -105,9 +107,15 @@ const theme = {
         `2px 2px 8px ${theme.colors.shadow.primary_dark}, 0px 2px 3px rgba(0, 0, 0, 0.08), inset 0px -4px 12px rgba(0, 0, 0, 0.12)`,
     },
   },
-  // Body styles
+  sizes: {
+    container: {
+      maxWidth: '75rem',
+    },
+  },
   styles: {
+    // Body styles
     root: {
+      fontSize: 3,
       fontFamily: 'body',
       fontWeight: 'body',
       backgroundColor: '#F5F8FA',
@@ -116,7 +124,7 @@ const theme = {
         border: 'none',
         margin: 0,
         textDecoration: 'none',
-        fontSize: 1,
+        fontSize: 0,
         cursor: 'pointer',
         textAlign: 'center',
         '-webkitAppearance': 'none',
