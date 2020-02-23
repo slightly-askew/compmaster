@@ -14,6 +14,7 @@
     "@types/react": "^16.9.19",
     "@types/theme-ui": "^0.3.0",
     "dotenv": "^8.2.0",
+    "formik": "^2.1.4",
     "framer-motion": "^1.8.4",
     "imagemin-gifsicle": "^7.0.0",
     "imagemin-mozjpeg": "^8.0.0",
@@ -25,10 +26,12 @@
     "next-optimized-images": "^2.5.4",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-text-mask": "^5.4.3",
     "responsive-loader": "^1.2.0",
     "theme-ui": "^0.3.1",
     "typescript": "^3.7.3",
-    "webp-loader": "^0.6.0"
+    "webp-loader": "^0.6.0",
+    "yup": "^0.28.1"
   },
   "scripts": {
     "dev": "next",
@@ -36,6 +39,7 @@
     "start": "next start"
   },
   "devDependencies": {
+    "@types/yup": "^0.26.32",
     "babel-plugin-emotion": "^10.0.23"
   }
 }
