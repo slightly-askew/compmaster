@@ -1,11 +1,7 @@
 /**@jsx jsx */
+import { NextPage } from 'next'
 import { jsx, Input, Label } from 'theme-ui'
-import {
-  Formik,
-  Field,
-  Form as FormikForm,
-  ErrorMessage as FormikError,
-} from 'formik'
+import { Formik, Field, Form, ErrorMessage } from 'formik'
 import dayjs, * as Day from 'dayjs'
 //
 import MaskedInput from 'react-text-mask'
@@ -13,6 +9,33 @@ import * as Yup from 'yup'
 
 const MINIMUM_REGISTRATION_AGE = 12
 const MAXIMUM_REGISTRATION_AGE = 150
+
+interface RegFormProps {}
+
+const mobileMask = [
+  /\d/,
+  /\d/,
+  /\d/,
+  /\d/,
+  /\d/,
+  ' ',
+  /\d/,
+  /\d/,
+  /\d/,
+  ' ',
+  /\d/,
+  /\d/,
+  /\d/,
+]
+
+const initialValues = {
+  name: '',
+  mobile: '',
+  email: '',
+  dob: '',
+  password: '',
+  passwordConfirmation: '',
+}
 
 const regFormSchema = Yup.object().shape({
   name: Yup.string()
@@ -53,3 +76,31 @@ const regFormSchema = Yup.object().shape({
 })
 
 type Registration = Yup.InferType<typeof regFormSchema>
+
+const RegistrationForm: NextPage<RegFormProps> = () => {
+  return (
+    <Formik
+      initialValues={initialValues}
+      validationSchema={regFormSchema}
+      onSubmit={() => {}}
+      //handleSubmit={e => e.preventDefault()}
+    >
+      {({ values, errors, touched, setFieldValue, isValid }) => {
+        return (
+          <Form name="registration-form">
+            <Field name="name">
+              {({ field }) => {
+                return (
+                  <>
+                    <label>My label</label>
+                    <Input></Input>
+                  </>
+                )
+              }}
+            </Field>
+          </Form>
+        )
+      }}
+    </Formik>
+  )
+}
