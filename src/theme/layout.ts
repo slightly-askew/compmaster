@@ -20,4 +20,16 @@ export default {
       ml: 2,
     },
   },
+  form: {
+    input: {
+      large: {
+        primary: {
+          default: {
+            bg: 'defaultText.50',
+            border: 'none',
+          },
+        },
+      },
+    },
+  },
 }

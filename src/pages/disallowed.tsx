@@ -1,24 +1,25 @@
-/**@jsx jsx */
-import { NextPage } from 'next'
+/** @jsx jsx */
+
 import { jsx, Flex, Box } from 'theme-ui'
+import { NextPage } from 'next'
 import Header from '../components/Header'
-import RegistrationForm from '../components/RegistrationForm'
 
-interface LoginProps {}
+interface DashProps {}
 
-const Login: NextPage<LoginProps> = props => {
+const Dashboard: NextPage<DashProps> = () => {
   return (
     <>
       <Header />
       <Flex sx={{ pt: 9, justifyContent: 'center', alignItems: 'center' }}>
         <Box sx={FormBox}>
-          <RegistrationForm />
+          <h1>Fuck off!</h1>
+          <p>You don't have access.</p>
+          <p>Something helpful should be here but it isn't.</p>
         </Box>
       </Flex>
     </>
   )
 }
-
 const FormBox = {
   background: 'white',
   boxShadow: 'elevation3',
@@ -27,4 +28,4 @@ const FormBox = {
   borderRadius: 2,
 }
 
-export default Login
+export default Dashboard

@@ -16,7 +16,9 @@ const Header: NextPage<HeaderProps> = props => {
             <Link href="/register">
               <Button>Register</Button>
             </Link>
-            <Button variant="ghost">Login</Button>
+            <Link href="/login">
+              <Button variant="ghost">Login</Button>
+            </Link>
           </div>
         </Flex>
       </Container>
