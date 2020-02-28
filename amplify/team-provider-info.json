@@ -1,0 +1,15 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-compmaster-dev-84017-authRole",
+            "UnauthRoleArn": "arn:aws:iam::517934760909:role/amplify-compmaster-dev-84017-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::517934760909:role/amplify-compmaster-dev-84017-authRole",
+            "Region": "ap-southeast-2",
+            "DeploymentBucketName": "amplify-compmaster-dev-84017-deployment",
+            "UnauthRoleName": "amplify-compmaster-dev-84017-unauthRole",
+            "StackName": "amplify-compmaster-dev-84017",
+            "StackId": "arn:aws:cloudformation:ap-southeast-2:517934760909:stack/amplify-compmaster-dev-84017/c2e36910-59a9-11ea-87a2-026f52927b4e",
+            "AmplifyAppId": "d19qh588orz1g1"
+        }
+    }
+}
