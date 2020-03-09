@@ -6,9 +6,6 @@ import Button from './Button'
 //import MaskedInput from 'react-text-mask'
 import * as Yup from 'yup'
 
-const MINIMUM_REGISTRATION_AGE = 12
-const MAXIMUM_REGISTRATION_AGE = 150
-
 interface RegFormProps {}
 
 const mobileMask = [

@@ -1,5 +1,6 @@
 import layout from './layout'
 import buttons from './buttons'
+import forms from './forms'
 import root from './root'
 import colors from './colors'
 
@@ -52,6 +53,7 @@ const theme = {
     },
   },
   buttons,
+  forms,
   layout,
   styles: {
     // Body styles

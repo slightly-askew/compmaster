@@ -2,7 +2,8 @@ export default {
   fontSize: 1,
   fontFamily: 'body',
   fontWeight: 'body',
-  backgroundColor: '#F5F8FA',
+  backgroundColor: '#f8fdfd',
+  //backgroundImage: (theme: any) => theme.colors.background,
   '& button': {
     display: 'inline-block',
     border: 'none',

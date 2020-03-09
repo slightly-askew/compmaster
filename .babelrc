@@ -3,7 +3,8 @@
     "production": {
       "presets": ["next/babel"],
       "plugins": [
-        "emotion" // emotion must be first for all environments
+        "emotion", // emotion must be first for all environments
+        "lodash"
       ]
     },
     "development": {

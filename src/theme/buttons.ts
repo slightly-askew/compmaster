@@ -28,10 +28,10 @@ export default {
     textTransform: 'normal',
     letterSpacing: '0',
     bg: 'transparent',
-    color: 'defaultText.40',
+    color: 'allPrimaryText.40',
     fontWeight: '400',
     '&:hover': {
-      bg: 'rgba(32, 32, 32, 0.05)',
+      bg: 'allPrimaryText.190',
       color: 'defaultText.20',
     },
   },

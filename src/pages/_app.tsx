@@ -3,6 +3,11 @@ import { AppProps } from 'next/app'
 import { ThemeProvider } from 'theme-ui'
 import theme from '../theme'
 import Head from 'next/head'
+import * as Sentry from '@sentry/node'
+
+Sentry.init({
+  dsn: process.env.SENTRY_DSN,
+})
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
