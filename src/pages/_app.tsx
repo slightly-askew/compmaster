@@ -9,6 +9,16 @@ Sentry.init({
   dsn: process.env.SENTRY_DSN,
 })
 
+import withFirebaseAuth from 'react-with-firebase-auth'
+import * as firebase from 'firebase/app'
+import 'firebase/auth'
+
+Sentry.init({
+  dsn: process.env.SENTRY_DSN,
+})
+
+// const firebaseApp = firebase.initializeApp(firebaseConfig) need to get config from env
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>

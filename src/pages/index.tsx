@@ -2,10 +2,10 @@ import Header from '../components/Header'
 
 import { NextPage } from 'next'
 
-const Home: NextPage<{}> = props => (
-  <>
+const Index: NextPage<{}> = () => (
+  <div>
     <Header />
-  </>
+  </div>
 )
 
-export default Home
+export default Index
