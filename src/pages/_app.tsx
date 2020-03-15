@@ -1,9 +1,11 @@
 // import App from 'next/app'
 import { AppProps } from 'next/app'
 import { ThemeProvider } from 'theme-ui'
+import { AnimatePresence } from 'framer-motion'
+import * as Sentry from '@sentry/node'
 import theme from '../theme'
 import Head from 'next/head'
-import * as Sentry from '@sentry/node'
+import Header from '@components/Header'
 
 Sentry.init({
   dsn: process.env.SENTRY_DSN,
@@ -19,7 +21,7 @@ Sentry.init({
 
 // const firebaseApp = firebase.initializeApp(firebaseConfig) need to get config from env
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps, router }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
       <Head>
@@ -34,7 +36,10 @@ function MyApp({ Component, pageProps }: AppProps) {
           key="viewport"
         />
       </Head>
-      <Component {...pageProps} />
+      <Header />
+      <AnimatePresence exitBeforeEnter>
+        <Component key={router.route} {...pageProps} />
+      </AnimatePresence>
     </ThemeProvider>
   )
 }

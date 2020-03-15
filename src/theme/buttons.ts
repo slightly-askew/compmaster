@@ -16,9 +16,9 @@ export default {
     ...defaults,
     bg: 'primary.90',
     color: 'invertedText.10',
-    boxShadow: '20',
+    boxShadow: (theme: any) => theme._shadows.s10,
     '&:hover': {
-      bg: 'allPrimary.80',
+      bg: 'primaryColors.80',
       color: 'invertedText.0',
     },
   },
@@ -27,11 +27,11 @@ export default {
     textTransform: 'normal',
     letterSpacing: '0',
     bg: 'transparent',
-    color: 'allPrimaryShades.40',
+    color: 'primaryAlpha.a40',
     fontWeight: '400',
     '&:hover': {
-      bg: 'allPrimaryShades.190',
-      color: 'allPrimaryShades.20',
+      bg: 'primaryAlpha.a190',
+      color: 'primaryAlpha.a20',
     },
   },
 }

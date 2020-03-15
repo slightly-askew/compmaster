@@ -17,6 +17,7 @@
 
     "paths": {
       "@components/*": ["./src/components/*"],
+      "@forms/*": ["./src/components/forms*"],
       "@api/*": ["./src/api/*"],
       "@theme/*": ["./src/theme/*"],
       "@hooks/*": ["./src/hooks/*"],
@@ -30,5 +31,11 @@
     }
   },
   "exclude": ["node_modules"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.spec.ts", "**/*.tsx"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.spec.ts",
+    "**/*.tsx",
+    "src/components/forms/FormControl.js"
+  ]
 }

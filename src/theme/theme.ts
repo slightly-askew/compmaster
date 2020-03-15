@@ -4,6 +4,7 @@ import forms from './forms'
 import root from './root'
 import colors from './colors'
 import shadows from './shadows'
+import _shadows from './shadowVariants'
 
 const theme = {
   colors,
@@ -51,6 +52,7 @@ const theme = {
       },
     },
   },
+  _shadows,
   buttons,
   forms,
   layout,

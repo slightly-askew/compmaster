@@ -1,17 +1,34 @@
 {
+  "presets": ["next/babel"],
+  "plugins": [
+    "emotion",
+    "lodash",
+    [
+      "module-resolver",
+      {
+        "root": ["."],
+        "alias": {
+          "@components": "./src/components",
+          "@forms": "./src/components/forms",
+          "@api": "./src/api",
+          "@screens": "./src/screens",
+          "@hooks": "./src/hooks",
+          "@services": "./src/services",
+          "@constants": "./src/constants",
+          "@context": "./src/context",
+          "@queries": "./src/queries",
+          "@data": "./src/data",
+          "@typeDefs": "./src/types",
+          "@generated": "./src/generated"
+        }
+      }
+    ]
+  ],
   "env": {
-    "production": {
-      "presets": ["next/babel"],
-      "plugins": [
-        "emotion", // emotion must be first for all environments
-        "lodash"
-      ]
-    },
     "development": {
-      "presets": ["next/babel"],
       "plugins": [
         [
-          "emotion",
+          "emotion", // emotion must be first for all environments
           {
             "sourceMap": true
           }

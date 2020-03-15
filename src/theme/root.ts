@@ -1,9 +1,9 @@
 export default {
+  variant: 'layout.backgrounds.b0',
   fontSize: 1,
   fontFamily: 'body',
   fontWeight: 'body',
-  backgroundColor: '#f8fdfd',
-  //backgroundImage: (theme: any) => theme.colors.background,
+  //background: (theme: any) => theme.colors.background.b0,
   '& button': {
     display: 'inline-block',
     border: 'none',

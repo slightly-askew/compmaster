@@ -6,6 +6,27 @@ const defaults = {
 export default {
   input: {
     ...defaults,
-    bg: 'allPrimaryShades.190',
+    bg: 'primaryAlpha.a190',
+    color: 'primaryAlpha.a150',
+  },
+  errorMessage: {
+    color: 'error.validationText',
+    bg: 'error.validationBackground',
+    mt: 1,
+    borderRadius: 2,
+    fontSize: 0,
+  },
+  requiredIndicator: {
+    color: 'error.e10',
+  },
+  optionalIndicator: {
+    color: 'primaryAlpha.a80',
+    fontSize: '0',
+  },
+  label: {
+    color: 'primaryAlpha.a80',
+    fontSize: '0',
+    display: 'flex',
+    justifyContent: 'space-between',
   },
 }

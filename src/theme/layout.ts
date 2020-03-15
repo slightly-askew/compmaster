@@ -2,8 +2,8 @@ import { Flex } from 'theme-ui'
 
 export default {
   header: {
-    background: 'white',
-    boxShadow: 'elevation3',
+    bg: 'background.b40',
+    boxShadow: (theme: any) => theme._shadows.s20,
     color: 'defaultText.30',
     display: 'flex',
     py: 2,
@@ -15,19 +15,22 @@ export default {
     mx: 'auto',
   },
   backgrounds: {
-    10: {
+    b0: {
+      bg: 'background.b0',
+    },
+    b10: {
+      boxShadow: (theme: any) => theme._shadows.s20,
+      background: (theme: any) => theme.colors.background.b40,
+    },
+    b20: {
       bg: '',
       boxShadow: '',
     },
-    20: {
+    b30: {
       bg: '',
       boxShadow: '',
     },
-    30: {
-      bg: '',
-      boxShadow: '',
-    },
-    40: {
+    b40: {
       bg: '',
       boxShadow: '',
     },
