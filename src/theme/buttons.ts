@@ -14,12 +14,11 @@ const defaults = {
 export default {
   primary: {
     ...defaults,
-    bg: 'primary',
+    bg: 'primary.90',
     color: 'invertedText.10',
-    boxShadow: (theme: any) =>
-      `2px 2px 8px ${theme.colors.shadow.primary}, 0px 2px 3px rgba(0, 0, 0, 0.08), inset 0px -4px 12px rgba(0, 0, 0, 0.12)`,
+    boxShadow: '20',
     '&:hover': {
-      bg: 'primary_light',
+      bg: 'allPrimary.80',
       color: 'invertedText.0',
     },
   },
@@ -28,11 +27,11 @@ export default {
     textTransform: 'normal',
     letterSpacing: '0',
     bg: 'transparent',
-    color: 'allPrimaryText.40',
+    color: 'allPrimaryShades.40',
     fontWeight: '400',
     '&:hover': {
-      bg: 'allPrimaryText.190',
-      color: 'defaultText.20',
+      bg: 'allPrimaryShades.190',
+      color: 'allPrimaryShades.20',
     },
   },
 }

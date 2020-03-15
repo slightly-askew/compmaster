@@ -1,6 +1,15 @@
 export default {
-  background:
-    'radial-gradient(62.92% 161.07% at 16.11% 37.28%, #3F2264 0%, #302F57 100%)',
+  background: {
+    b10: '#f2f2f2',
+    b20: '#f5f5f5',
+    b30: '#f7f8f8',
+    b40: '#fafafa',
+    b50: '#fcfcfc',
+  },
+  gradient: {
+    spurs_away:
+      'radial-gradient(62.92% 161.07% at 16.11% 37.28%, #3F2264 0%, #302F57 100%)',
+  },
   allPrimary: {
     '0': '#fcffff',
     '10': '#fbfffe',
@@ -17,7 +26,7 @@ export default {
     '110': '#272868',
     '120': '#19163b',
   },
-  allPrimaryText: {
+  allPrimaryShades: {
     '0': 'rgba(25, 22, 59, 1)',
     '10': 'rgba(25, 22, 59, 0.95)',
     '20': 'rgba(25, 22, 59, 0.9)',
@@ -44,7 +53,15 @@ export default {
   primary: '#4567b1',
   primary_dark: '#364690',
   shadow: {
-    primary: 'rgba(7, 112, 235, 0.26)',
+    //these would all be 'none' in dark mode
+    primary: 'rgba(82, 138, 200, 0.16)',
+    dark: {
+      80: `rgba(28, 25, 61, 0.08)`,
+      60: `rgba(28, 25, 61, 0.06)`,
+      50: `rgba(28, 25, 61, 0.05)`,
+      40: `rgba(28, 25, 61, 0.04)`,
+      30: `rgba(28, 25, 61, 0.03)`,
+    },
   },
   base: {
     '0': '#FFFFFF',

@@ -6,6 +6,6 @@ const defaults = {
 export default {
   input: {
     ...defaults,
-    bg: 'allPrimaryText.190',
+    bg: 'allPrimaryShades.190',
   },
 }

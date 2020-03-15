@@ -92,15 +92,17 @@ const RegistrationForm: NextPage<RegFormProps> = () => {
             sx={{
               fontSize: 0,
               width: '16rem',
-              '& > *:not(:first-of-type)': { mt: 2 },
+              '& > *:not(:first-of-type)': { mt: 3 },
             }}
           >
             <Field name="name">
               {({ field }: { field: any }) => {
                 return (
                   <div>
-                    <Label sx={{ mb: 1 }}>Full Name</Label>
-                    <Input {...field} sx={{ borderRadius: 1 }} />
+                    <Label sx={{ mb: 1, color: 'allPrimaryShades.60' }}>
+                      Full Name
+                    </Label>
+                    <Input {...field} sx={{ borderRadius: 1, fontSize: 1 }} />
                   </div>
                 )
               }}
@@ -109,8 +111,10 @@ const RegistrationForm: NextPage<RegFormProps> = () => {
               {({ field }: { field: any }) => {
                 return (
                   <div>
-                    <Label sx={{ mb: 1 }}>Mobile Number</Label>
-                    <Input {...field} sx={{ borderRadius: 1 }} />
+                    <Label sx={{ mb: 1, color: 'allPrimaryShades.60' }}>
+                      Mobile Number
+                    </Label>
+                    <Input {...field} sx={{ borderRadius: 1, fontSize: 1 }} />
                   </div>
                 )
               }}
@@ -119,8 +123,10 @@ const RegistrationForm: NextPage<RegFormProps> = () => {
               {({ field }: { field: any }) => {
                 return (
                   <div>
-                    <Label sx={{ mb: 1 }}>Email</Label>
-                    <Input {...field} sx={{ borderRadius: 1 }} />
+                    <Label sx={{ mb: 1, color: 'allPrimaryShades.60' }}>
+                      Email
+                    </Label>
+                    <Input {...field} sx={{ borderRadius: 1, fontSize: 1 }} />
                   </div>
                 )
               }}
@@ -129,8 +135,10 @@ const RegistrationForm: NextPage<RegFormProps> = () => {
               {({ field }: { field: any }) => {
                 return (
                   <div>
-                    <Label sx={{ mb: 1 }}>Password</Label>
-                    <Input {...field} sx={{ borderRadius: 1 }} />
+                    <Label sx={{ mb: 1, color: 'allPrimaryShades.60' }}>
+                      Password
+                    </Label>
+                    <Input {...field} sx={{ borderRadius: 1, fontSize: 1 }} />
                   </div>
                 )
               }}

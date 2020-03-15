@@ -3,12 +3,15 @@ import buttons from './buttons'
 import forms from './forms'
 import root from './root'
 import colors from './colors'
+import shadows from './shadows'
 
 const theme = {
   colors,
   sizes: {},
   fontWeights: {
     body: 400,
+    medium: 500,
+    semiBold: 600,
     bold: 700,
   },
   fontSizes: [
@@ -35,13 +38,9 @@ const theme = {
     '96px',
     '144px',
   ],
-  shadows: {
-    elevation3:
-      '3px 3px 48px rgba(0, 0, 0, 0.04), 2px 5px 30px rgba(0, 0, 0, 0.06)',
-  },
+  shadows,
   fonts: {
     body: '"Euclid Circular B Trial",system-ui, sans-serif',
-    heading: '"Avenir Next", sans-serif',
   },
   typography: {
     interface: {

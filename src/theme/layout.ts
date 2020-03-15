@@ -14,6 +14,24 @@ export default {
     px: 5,
     mx: 'auto',
   },
+  backgrounds: {
+    10: {
+      bg: '',
+      boxShadow: '',
+    },
+    20: {
+      bg: '',
+      boxShadow: '',
+    },
+    30: {
+      bg: '',
+      boxShadow: '',
+    },
+    40: {
+      bg: '',
+      boxShadow: '',
+    },
+  },
   button_row: {
     display: 'flex',
     '& > *:not(:first-of-type)': {
