@@ -12,6 +12,7 @@ const FormBox: NextPage<Props> = ({ children, ...props }) => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0 }}
       {...props}
+      layoutTransition
       sx={{
         variant: 'layout.backgrounds.b10',
         py: 7,

@@ -13,8 +13,9 @@ export default {
     color: 'error.validationText',
     bg: 'error.validationBackground',
     mt: 1,
-    borderRadius: 2,
+    borderRadius: 1,
     fontSize: 0,
+    py: 1,
   },
   requiredIndicator: {
     color: 'error.e10',

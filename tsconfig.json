@@ -36,6 +36,7 @@
     "**/*.ts",
     "**/*.spec.ts",
     "**/*.tsx",
-    "src/components/forms/FormControl.js"
+    "src/components/forms/FormControl.js",
+    "src/components/forms/InputGroup.js"
   ]
 }

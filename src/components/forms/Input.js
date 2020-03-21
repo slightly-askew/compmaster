@@ -20,7 +20,7 @@ const Input = forwardRef((props, ref) => {
     focusBorderColor,
     errorBorderColor,
     errorId,
-    children
+    children,
     ...rest
   } = props
   return (
@@ -38,10 +38,12 @@ const Input = forwardRef((props, ref) => {
       aria-describedby={isInvalid && errorId}
       {...inputStyleProps}
       sx={{
-bg: 'primaryAlpha.a160'
-      {...rest}
+        bg: 'primaryAlpha.a160',
+        ...rest,
       }}
       children={children}
     />
   )
 })
+
+export default Input

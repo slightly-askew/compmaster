@@ -1,18 +1,16 @@
 /**@jsx jsx */
 import { jsx } from 'theme-ui'
 import { NextPage } from 'next'
-import { useState, useContext, forwardRef } from 'react'
+import { useState, useContext, forwardRef, createContext } from 'react'
 import { motion } from 'framer-motion'
 
-interface Props {}
-
-export const useFormControl = (props: any) => {
+export const useFormControl = props => {
   const context = useFormControlContext()
   if (!context) {
     return props
   }
   const keys = Object.keys(context)
-  return keys.reduce((acc: any, prop: any) => {
+  return keys.reduce((acc, prop) => {
     /** Giving precedence to `props` over `context` */
     acc[prop] = props[prop]
 
@@ -26,7 +24,7 @@ export const useFormControl = (props: any) => {
   }, {})
 }
 
-const FormControlContext = createContext()
+const FormControlContext = createContext({})
 
 export const useFormControlContext = () => {
   const context = useContext(FormControlContext)
@@ -34,7 +32,10 @@ export const useFormControlContext = () => {
 }
 
 const FormControl = forwardRef(
-  ({ isInvalid, isRequired, isDisabled, isReadOnly,name, ...rest }, ref) => {
+  (
+    { isInvalid, isRequired, isDisabled, isReadOnly, name, optional, ...rest },
+    ref
+  ) => {
     const [isActive, setIsActive] = useState(false)
     const context = {
       isRequired,
@@ -43,7 +44,7 @@ const FormControl = forwardRef(
       isReadOnly,
       optional,
       name,
-      errorId: name && `${name}Error`
+      errorId: name && `${name}Error`,
     }
 
     return (
@@ -52,7 +53,11 @@ const FormControl = forwardRef(
           role="group"
           ref={ref}
           variants={animationStates}
-          {...rest}}
+          initial="hidden"
+          animate="show"
+          exit="hidden"
+          positionTransition
+          {...rest}
         />
       </FormControlContext.Provider>
     )

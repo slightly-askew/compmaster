@@ -14,11 +14,11 @@ const defaults = {
 export default {
   primary: {
     ...defaults,
-    bg: 'primary.90',
+    bg: 'primaryColors.p90',
     color: 'invertedText.10',
     boxShadow: (theme: any) => theme._shadows.s10,
     '&:hover': {
-      bg: 'primaryColors.80',
+      bg: 'primaryColors.p80',
       color: 'invertedText.0',
     },
   },

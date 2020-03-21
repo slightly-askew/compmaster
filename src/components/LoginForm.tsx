@@ -6,6 +6,8 @@ import Button from './Button'
 //import MaskedInput from 'react-text-mask'
 import * as Yup from 'yup'
 
+import InputGroup from './forms/InputGroup'
+
 interface RegFormProps {}
 
 const mobileMask = [
@@ -58,18 +60,6 @@ const RegistrationForm: NextPage<RegFormProps> = () => {
               '& > *:not(:first-of-type)': { mt: 3 },
             }}
           >
-            <Field name="email">
-              {({ field }: { field: any }) => {
-                return (
-                  <div>
-                    <Label sx={{ mb: 1, color: 'primaryAlpha.a60' }}>
-                      Email
-                    </Label>
-                    <Input {...field} sx={{ borderRadius: 1, fontSize: 1 }} />
-                  </div>
-                )
-              }}
-            </Field>
             <Field name="password">
               {({ field }: { field: any }) => {
                 return (
